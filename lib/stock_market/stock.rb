@@ -26,7 +26,7 @@ class StockMarket
     end
 
     def price
-      google_finance.css('#ref_22144_l').text
+      google_finance.css('.pr').text
     end
 
   end

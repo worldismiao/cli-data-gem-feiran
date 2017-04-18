@@ -11,10 +11,12 @@ class StockMarket
     def stock_info
       puts "Give me your ticker."
       ticker=gets.strip
-      if ticker != 'exit'
+      while ticker != 'exit' do
       stock = StockMarket::Stock.new(ticker)
       puts "Company Name: #{stock.name}"
       puts "Stock Price: #{stock.price}"
+      puts "Give me another ticker or type 'exit'"
+      ticker=gets.strip
       end
     end
 
